@@ -1,6 +1,7 @@
 ## Sample output
 
 Prepare a sample matrix using the makeCacheMatrix function
+
 	#> test <- makeCacheMatrix( matrix(c(1,2,3,4), nrow = 2, ncol = 2) );
 
 	#> summary(test)
