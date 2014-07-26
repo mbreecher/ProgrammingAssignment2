@@ -1,6 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 # Create a matrix wrapper that allows the inverse of the 
 # matrix to be stored in the global environment
 makeCacheMatrix <- function(x = matrix()) {
