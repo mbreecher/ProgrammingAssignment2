@@ -1,15 +1,10 @@
 # Create a matrix wrapper that allows the inverse of the 
-# matrix to be stored in the global environment
+# matrix to be stored
 makeCacheMatrix <- function(x = matrix()) {
-  
-  # verify input is correct type
-  if(!is.matrix(x)){
-    stop("Argument needs to be a matrix")
-  }
   
   inverse <- NULL # set empty spot for inverse
   
-  # function to set matrix and inverse in global environment
+  # function to set matrix and inverse
   set <- function(y) {
     x <<- y
     inverse <<- NULL
@@ -17,9 +12,16 @@ makeCacheMatrix <- function(x = matrix()) {
   
   #function to get matrix and inverse
   get <- function() x
-  #solve matrix and store solution in global environment
-  setinverse <- function(solve) inverse <<- soln
-  getinverse <- function() inverse
+  
+  #solve matrix and store solution
+  setinverse <- function(solve){
+    inverse <<- solve
+  } 
+  getinverse <- function(){
+    inverse
+  } 
+  
+  
   list(set = set, get = get,
        setinverse = setinverse,
        getinverse = getinverse)
